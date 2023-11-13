@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Fonawesomet-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <!-- Conector CSS propio -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link rel="shortcut icon" href="./assets/img/Logo-Nav.ico" />
+    <title>JD Servicios Integrales</title>
+</head>
+
+<body class="body">
+
+    <header>
+        <nav class="menu2" id="inicio">
+            <!--logo Jd-->
+            <a href="#"><img class="logonav" src="./assets/img/Logo-Nav.webp" alt="logo"></a>
+
+            <ul class="enlaces-menu menu-horizontal">
+                <li>
+                    <a href="./index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="./servicios.html">Servicios</a>
+                </li>
+                <li>
+                    <a href="./contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="#">Trabaja con Nosotros</a>
+                </li>
+                <li>
+                    <a href="" class="sitios">Sitios de Interés</a>
+                    <ul class="menu-vertical">
+                        <li>
+                            <a href="https://www.cgai.cl/home/" target="_blank">CGAI Chile</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bcn.cl/leychile/navegar?idNorma=1174663" target="_blank">LEY 21442</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button class="ham" type="button">
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main class="main_job">
+        <div class="img-container">
+            <img src="./assets/img/img-portada/ggss1.webp" alt="">
+        </div>
+        <div class="contenedor-job1">
+            <H1 class="text1 borde-texto">TRABAJA CON NOSOTROS</H1>
+        </div>
+    </main>
+
+    <section class="container--job">
+        <div class="info--job">
+            <h3>TE INVITAMOS A SER PARTE DE NUESTRO EQUIPO</h3>
+            <h4>Con más de 10 años de experiencia en el mercado</h4>
+            <p class="text2">Te invitamos a postular para ser parte de nuestro equipo. Estamos buscando a
+                los mejores en
+                el área de
+                <strong>seguridad, aseo, transporte y administración</strong>, para ser parte de
+                nuestra empresa.
+            </p>
+            <p class="text2">Antes de postular, no olvides consultar nuestros requisitos:
+            </p>
+            <ul>
+                <li><a href="" class="text2">Seguridad</a></li>
+                <li><a href="" class="text2">Aseo</a></li>
+                <li><a href="" class="text2">Transporte</a></li>
+                <li><a href="" class="text2">Administración</a></li>
+            </ul>
+
+            <h4>Términos y condiciones y política de privacidad</h4>
+            <p class="text2">Para gestionar y atender actuales y futuros procesos de selección en
+                <strong>JD Servicios
+                    Integrales
+                    Ltda.</strong>, necesitamos que nos compartas tus datos personales y tu currículum. Si quieres más
+                información sobre el tratamiento de tus datos y tus
+                derechos te recomendamos que leas atentamente nuestra política de privacidad.
+                <button class="btn-poli"><a href="./doc.html" target="_blank"><small><b>pulsa
+                                aqui</b></small></a></button>
+            </p>
+        </div>
+
+        <div class="form--job">
+
+            <h4>Ingresa tus datos aqui</h4>
+
+            <form action="" method="POST">
+                <p>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Indicanos tu nombre" />
+                </p>
+
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu correo" />
+                </p>
+
+                <p>
+                    <label for="phone">Telefono</label>
+                    <input type="tel" name="phone" id="phone" placeholder="¿Donde te llamamos?" />
+                </p>
+
+                <p>
+                    <label for="contac">Cargo</label>
+                    <input type="text" name="contac" id="contac" placeholder="Cargo que postulas" />
+                </p>
+
+                <p class="block">
+                    <label for="contac">Subir_documentos</label>
+                    <input type="text" name="doc" id="doc" placeholder="Adjunta tus documentos" />
+                </p>
+
+                <p class="block">
+                    <label for="message" class="block">Mensaje</label>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                </p>
+
+                <p class="acepto block">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox"><small><b>Acepto la Política de Privacidad</b></small></label>
+                </p>
+
+                <p class="block">
+                    <input class="btn" type="submit" value="enviar" />
+                </p>
+
+                <!--para envio-->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html" />
+                <!--para que el formulario regrese a la misma pagina-->
+                <input type="hidden" name="_captcha" value="false" /><!--para evitar la validación-->
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer class="container-footer">
+        <div class="logo-footer">
+            <div class="logo">
+                <img src="./assets/img/Logo-Nav.webp" alt="logo" class="logonav img-fluid" />
+            </div>
+        </div>
+
+        <div class="contacto-footer">
+            <h4 class="job-text0">Como llegar a nosotros:</h4>
+            <p>JDsintegrales@jdsintegrales.cl
+                <br>
+                +56 9 3310 1340
+                <br>
+                Baquedano #50, Oficina 810, Antofagasta
+            </p>
+        </div>
+
+        <div class="redes_sociales">
+            <div class="link facebook" id="btn_facebook">
+                <a target="_blank" class="icon-f icon--facebook"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+            <div class="link instagram" id="btn_instagram">
+                <a target="_blank" class="icon-f icon--instagram"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <div class="link WhatsApp" id="btn_whatsapp">
+                <a target="_blank" class="icon-f icon--whatsapp"><i class="fab fa-whatsapp fa-2x"
+                        id="icon__btn"></i></a>
+            </div>
+            <div class="link correo" id="btn_correo">
+                <a target="_blank" class="icon-f icon--mail"><i class="far fa-envelope fa-2x" id="icon__btn"></i></a>
+            </div>
+        </div>
+
+        <div class="copy-footer">
+            <p>JD Servicios Integrales.
+                <br>
+                © <span id="demo"></span>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Boton Up -->
+    <div id="btn-up">
+        <i class="fas fa-angle-up icon-up fa-2x"></i>
+    </div>
+
+
+    <script>
+        <!--fecha copy-->
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+      </script>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/form.js"></script>
+</body>
+
+</html>

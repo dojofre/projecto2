@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Fonawesomet-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+  <!-- Conector CSS propio -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <link rel="shortcut icon" href="./assets/img/Logo-Nav.ico" />
+
+  <title>JD Servicios Integrales</title>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('-7EmKObdxh35u1u6J')
+  </script>
+</head>
+
+<body class="body">
+  <!--Codigo Menú-->
+  <header>
+    <nav class="menu1">
+      <!--logo Jd-->
+      <a href="#"><img class="logonav" src="./assets/img/Logo-Nav.webp" alt="logo"></a>
+
+      <ul class="enlaces-menu menu-horizontal">
+        <li>
+          <a href="./index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="./nosotros.html">Nosotros</a>
+        </li>
+        <li>
+          <a href="./servicios.html">Servicios</a>
+        </li>
+        <li>
+          <a href="#">Contacto</a>
+        </li>
+        <li>
+          <a href="./job.html">Trabaja con Nosotros</a>
+        </li>
+        <li>
+          <a href="" class="sitios">Sitios de Interés</a>
+          <ul class="menu-vertical">
+            <li>
+              <a href="https://www.cgai.cl/home/" target="_blank">CGAI Chile</a>
+            </li>
+            <li>
+              <a href="https://www.bcn.cl/leychile/navegar?idNorma=1174663" target="_blank">LEY 21442</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <button class="ham" type="button">
+        <span class="br-1"></span>
+        <span class="br-2"></span>
+        <span class="br-3"></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <section class="container--contacto">
+    <!--Codigo Formulario-->
+    <div class="contactanos">
+      <div class="main">
+        <h1>Contacto</h1>
+        <h2>¡Trabajemos juntos!</h2>
+        <p class="text2" id="f-text1">
+          Si deseas consultar mayor información sobre nuestros servicios o
+          tienes alguna duda al respecto, no dudes en solicitar dicha
+          información y uno de nuestros ejecutivos se contactara con usted a
+          la brevedad posible.
+        </p>
+      </div>
+
+      <form id="form">
+
+        <div class="input-control">
+          <label for="from_name">Nombre</label>
+          <input id="from_name" name="from_name" type="text" placeholder="Indicanos tu nombre">
+          <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" placeholder="Ingresa tu correo" autocomplete="email">
+          <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="phone" id="f-text1">Telefono</label>
+          <input type="tel" name="phone" id="phone" placeholder="¿Donde te podemos llamar?" autocomplete="phone" />
+          <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="contac" id="f-text1">Desde donde nos contacta</label>
+          <input type="text" name="contac" id="contac" placeholder="¿Cuentanos quien eres?" />
+          <div class="error"></div>
+        </div>
+
+        <div class="input-control  block">
+          <label for="message" class="block">Mensaje</label>
+          <textarea name="message" id="message" cols="30" rows="5" placeholder="Escriba aquí su mensaje"></textarea>
+          <div class="error"></div>
+        </div>
+
+
+        <div class="form-txt block">
+          <a href="./doc.html" target="_blank"><small>Politica de privacidad</small></a>
+        </div>
+
+        <p class="block">
+          <input class="btn" type="submit" id="button" value="Enviar" />
+        </p>
+
+        <!--para envio-->
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html" />
+        <!--para que el formulario regrese a la misma pagina-->
+        <input type="hidden" name="_captcha" value="false" /><!--para evitar la validación-->
+      </form>
+
+    </div>
+
+    <!--Codigo Mapa-->
+    <div class="mapp">
+      <h5>Más Información</h5>
+      <h2>JD Servicios Integrales</h2>
+
+      <div class="contac1">
+        <a href="" class="form-txt1" id="f-text1">
+          <i class="far fa-envelope fa-2x"><span class="txt">JDsintegrales@jdsintegrales.cl</span>
+          </i>
+        </a>
+
+        <div class="form-txt1" id="f-text1">
+          <i class="fas fa-phone-alt fa-2x"><span class="txt">+56 9 3310 1340</span></i>
+        </div>
+      </div>
+      <div class="contac2">
+        <div class="link facebook" id="btn_facebook">
+          <a target="_blank" class="icon-f1 icon--facebook"><i class="fab fa-facebook fa-3x"></i></a>
+        </div>
+        <div class="link instagram" id="btn_instagram">
+          <a target="_blank" class="icon-f1 icon--instagram"><i class="fab fa-instagram fa-3x"></i></a>
+        </div>
+        <div class="link WhatsApp" id="btn_whatsapp">
+          <a target="_blank" class="icon-f1 icon--whatsapp"><i class="fab fa-whatsapp fa-3x" id="icon__btn"></i></a>
+        </div>
+        <div class="link correo" id="btn_correo">
+          <a target="_blank" class="icon-f1 icon--mail"><i class="far fa-envelope fa-3x" id="icon__btn"></i></a>
+        </div>
+      </div>
+
+      <div class="contac3">
+        <i class="fas fa-map-marker-alt fa-2x"></i>
+        <p class="form-txt1" id="f-text1">
+          Baquedano #50, Oficina 810, Antofagasta
+        </p>
+
+        <div class="mapp-google">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1827.4233978597636!2d-70.40264510770209!3d-23.645657064696103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96afd53dfce563f9%3A0xbfcf89ae91079765!2sBaquedano%2050%2C%20Antofagasta!5e0!3m2!1ses-419!2scl!4v1695325184484!5m2!1ses-419!2scl"
+            width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Boton Up -->
+  <div id="btn-up">
+    <i class="fas fa-angle-up icon-up fa-2x"></i>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/form.js"></script>
+</body>
+
+</html>
