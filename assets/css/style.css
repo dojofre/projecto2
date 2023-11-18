@@ -1,6 +1,5 @@
 /*Conector Fonts Google*/
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /*General*/
 /*Reset Navegadores*/
@@ -25,7 +24,7 @@ html {
 
 /*estilo del body*/
 body {
-  font-family: "Heebo", sans-serif;
+  font-family: 'PT Serif', serif;
   color      : black;
   background : linear-gradient(100deg,
       rgba(255, 255, 255, 1) 0%,
@@ -47,8 +46,9 @@ body::-webkit-scrollbar-thumb {
 /*======================================================*/
 /*Menú*/
 .logonav {
-  width      : 4.5rem;
-  margin-left: 3rem;
+  width      : 70px;
+  height     : 70px;
+  margin-left: 50px;
 }
 
 .menu {
@@ -58,8 +58,7 @@ body::-webkit-scrollbar-thumb {
   display        : flex;
   align-items    : center;
   justify-content: space-between;
-  min-height     : 3vh;
-  background     : transparent;
+  height         : 80px;
   width          : 100%;
 }
 
@@ -96,8 +95,8 @@ body::-webkit-scrollbar-thumb {
   border-radius  : 0.6rem;
   line-height    : 1.3rem;
   padding        : 0.3rem;
-  width          : 100%;
-  margin-right   : 3rem;
+  width          : 45%;
+  margin-right   : 50px;
 }
 
 .enlaces-menu li {
@@ -108,12 +107,11 @@ body::-webkit-scrollbar-thumb {
 
 .enlaces-menu li a {
   display        : block;
-  padding        : 0.7rem 0.7rem;
+  padding        : 10px 5px;
   color          : #000;
   text-transform : uppercase;
-  font-size      : 1.1rem;
-  font-weight    : 600;
-  font-family    : "Heebo", sans-serif;
+  font-size      : 1rem;
+  font-weight    : bold;
   text-decoration: none;
 }
 
@@ -130,7 +128,7 @@ body::-webkit-scrollbar-thumb {
   list-style        : none;
   width             : 11.25rem;
   /*background-color: rgba(256, 112, 24, 0.7);*/
-  background-color  : rgba(39, 83, 158, 0.7);
+  background-color  : rgba(99, 136, 201, 0.3);
 }
 
 .enlaces-menu li:hover .menu-vertical {
@@ -197,57 +195,300 @@ body::-webkit-scrollbar-thumb {
   transform: rotate(360deg);
 }
 
-
 /*===========================================================*/
-
-.text {
-  font-size  : 1.1rem;
-  font-weight: 400;
-  font-family: "Heebo", sans-serif;
-  text-align : justify;
-}
-
-.text1 {
-  font-size  : 1.4rem;
-  font-weight: 400;
-  font-family: "Heebo", sans-serif;
-  text-align : justify;
-}
-
-.text2 {
-  font-size  : 1rem;
-  font-weight: 300;
-  font-family: "Heebo", sans-serif;
-  text-align : justify;
-}
-
-.f-text {
-  font-size  : 0.8rem;
-  font-weight: 400;
-  font-family: "Heebo", sans-serif;
-  text-align : justify;
-}
-
+/*General*/
 .borde-texto {
   text-shadow: 0.13rem 0 0 black, 0 0.13rem 0 black, -0.06rem 0 0 black,
     0 -0.06rem 0 black;
 }
 
+/*control general*/
+.input-control {
+  display       : flex;
+  flex-direction: column;
+  margin        : 0 5px;
+}
+
+.input-control input {
+  width: 95%;
+}
+
+.input-control input,
+.container--contacto .contactanos form textarea {
+  border-bottom: 1px solid black;
+  /* border    : 2px solid #f0f0f0;
+border-radius  : 4px; */
+  display      : block;
+  font-size    : 12px;
+  padding      : 10px;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color    : #ff3838;
+  font-size: 10px;
+  height   : 13px;
+}
+
+/*Boton Wsp*/
+.btn-wsp {
+  position     : fixed;
+  width        : 5.625rem;
+  height       : 5.625rem;
+  line-height  : 5.625rem;
+  bottom       : 160px;
+  right        : 150px;
+  background   : #0df053;
+  color        : #fff;
+  border-radius: 3rem;
+  font-size    : 4.688rem;
+  text-align   : center;
+  box-shadow   : 0 0.06rem 0.6rem rgba(0, 0, 0, 0.3);
+  z-index      : 100;
+
+  animation: efecto 1.2s infinite;
+}
+
+.btn-wsp:hover {
+  text-decoration: none;
+  /*para quitar el subrayado por defecto*/
+  color          : #0df053;
+  background     : #fff;
+
+  transform : scale(1.1);
+  /*Para que se agrande el icono*/
+  transition: 0.3s;
+}
+
+.icon-wsp {
+  width     : 4.375rem;
+  margin-top: 0.4rem;
+  transition: ease 1s;
+}
+
+@keyframes efecto {
+  0% {
+    box-shadow: 0 0 0 0 rgba(3, 200, 49, 0.85);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0.9rem rgba(3, 200, 49, 0);
+  }
+}
+
+/*Boton Up*/
+#btn-up {
+  width          : 3.75rem;
+  height         : 3.75rem;
+  background     : gray;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  color          : white;
+  border-radius  : 50%;
+  font-size      : 1.1rem;
+  position       : fixed;
+  bottom         : 175px;
+  right          : 85px;
+  cursor         : pointer;
+  border         : 0.3rem solid transparent;
+
+  transition: all 300ms ease;
+  transform : scale(0);
+  /*Transforma la escala a cero*/
+}
+
+#btn-up:hover {
+  background: #ec5000;
+  transform : scale(1.1);
+}
+
+/*enlaces-footer*/
+.container-footer {
+  width                : 100%;
+  display              : grid;
+  grid-gap             : 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows   : repeat(2, auto);
+
+  bottom    : 0;
+  background: #2c4290;
+
+  grid-template-areas:
+    "logo-footer social-footer contacto-footer"
+    "logo-footer copy-footer copy-footer";
+}
+
+.container-footer .logo-footer {
+  grid-area : logo-footer;
+  text-align: center;
+  position  : relative;
+}
+
+.container-footer .logo-footer .logo {
+  /*para centrar la imagen*/
+  position : absolute;
+  top      : 50%;
+  right    : 50%;
+  transform: translate(50%, -50%);
+}
+
+.container-footer .logo-footer .logo img {
+  width : 150px;
+  height: 150px;
+}
+
+.container-footer .enlaces-footer {
+  grid-area: enlaces-footer;
+  margin   : auto;
+}
+
+.container-footer .contacto-footer {
+  grid-area : contacto-footer;
+  text-align: center;
+  padding   : 0.6rem;
+}
+
+.container-footer .redes_sociales {
+  grid-area      : social-footer;
+  display        : flex;
+  text-align     : center;
+  margin-top     : 1.3rem;
+  color          : white;
+  justify-content: center;
+  align-items    : center;
+  border         : none;
+}
+
+.container-footer .copy-footer {
+  grid-area  : copy-footer;
+  text-align : right;
+  font-size  : 13px;
+  font-weight: 700;
+  color      : white;
+  margin     : auto;
+}
+
+.container-footer .contacto-footer h4 {
+  font-size  : 17px;
+  font-weight: 700;
+  color      : white;
+  text-align : center;
+}
+
+.container-footer .contacto-footer p {
+  font-size  : 13px;
+  font-weight: 400;
+  color      : white;
+  text-align : center;
+}
+
+.icon-f {
+  text-decoration : none;
+  padding         : 0.19rem;
+  margin          : 0.3rem;
+  width           : 3rem;
+  height          : 3rem;
+  background-color: #2c4290;
+  color           : #fff;
+  border-radius   : 50%;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  box-shadow      : 0.3rem 0.3rem 0.6rem #14235a, -0.3rem -0.3rem 0.6rem #466bf0e1;
+
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+
+  cursor: pointer;
+}
+
+.icon--instagram:hover {
+  background-image: radial-gradient(circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%);
+  outline-color: #a02d76;
+  color        : #fff;
+  border-radius: 50%;
+}
+
+.icon--facebook:hover {
+  background-color: rgb(44, 104, 255);
+  outline-color   : rgb(44, 104, 255);
+  color           : #fff;
+  border-radius   : 50%;
+}
+
+.icon--whatsapp:hover {
+  background-color: #2ea44f;
+  outline-color   : #2ea44f;
+  color           : #fff;
+  border-radius   : 50%;
+}
+
+.icon--mail:hover {
+  background-color: red;
+  outline-color   : red;
+  color           : #fff;
+  border-radius   : 50%;
+}
+
+.icon-f1 {
+  text-decoration : none;
+  padding         : 0.19rem;
+  margin          : 0.3rem;
+  width           : 5rem;
+  height          : 5rem;
+  background-color: transparent;
+  color           : #000;
+  border-radius   : 50%;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  box-shadow      : 0.3rem 0.3rem 0.6rem rgba(41, 19, 4, 0.191),
+    -0.3rem -0.3rem 0.6rem rgba(223, 174, 138, 0.191);
+  cursor         : pointer;
+  text-decoration: none;
+}
+
+.icon {
+  font-size    : 2rem;
+  margin       : 1rem 0;
+  border-radius: 50%;
+}
+
+
 
 /*======================================================*/
 /*inicio*/
+
 .contenedor {
   color    : #fbfcfd;
-  position : absolute;
+  position : relative;
   top      : 50%;
   left     : 5%;
   transform: translateY(-50%);
   z-index  : 2;
+  width    : 700px;
+  height   : 500px;
 }
 
 .contenedor .slide-txt {
   width          : 600px;
-  font-family    : "Heebo", sans-serif;
   display        : flex;
   justify-content: center;
   align-items    : center;
@@ -260,7 +501,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contenedor .context-slide {
-  overflow: hidden;
+  overflow       : hidden;
+  justify-content: center;
+  align-items    : center;
+  height         : 100px;
 }
 
 .contenedor .context-slide ul,
@@ -273,7 +517,7 @@ li {
   height     : 6rem;
   margin-left: 15.625rem;
   position   : relative;
-  animation  : slide 7s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  animation  : slide 15s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 
 .contenedor .context-slide li {
@@ -321,7 +565,15 @@ li {
   width: 11.25rem;
 }
 
-.contenedor button {
+.boton {
+  width    : 350px;
+  position : absolute;
+  top      : 62%;
+  left     : 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn_contac {
   color        : #fbfcfd;
   padding      : 0 1.5rem;
   background   : #ec5000;
@@ -331,14 +583,15 @@ li {
   cursor       : pointer;
   font-size    : 1.1rem;
 
-  width : 10.625rem;
-  height: 3rem;
+
+  width : 300px;
+  height: 60px;
 
   transition-property: background;
   /*define que propiedad sufre la transición*/
 }
 
-.contenedor button:hover {
+.contenedor .btn_contac:hover {
   background   : #ff0000;
   border-radius: 1.3rem;
 
@@ -410,30 +663,32 @@ li {
 }
 
 
+
+
 /*======================================================*/
 /*Sección 1 -- Nosotros*/
 .section1 {
   width                : 100%;
-  padding-top          : 4rem;
   display              : grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows   : repeat(4, auto);
-}
-
-.section1>div {
-  background: transparent;
+  padding              : 100px 100px 0;
 }
 
 .section1 .contenido {
   grid-column : 1/4;
   grid-row    : 1/3;
   margin-left : 5rem;
-  margin-top  : 1.9rem;
+  margin-top  : 30px;
   margin-right: 0.6rem;
 }
 
 .section1 .contenido p {
   text-indent: 15px;
+  font-size  : 19px;
+  font-weight: 400;
+  text-align : justify;
+  margin     : 0 10px;
 }
 
 .section1 .sidebar1 {
@@ -448,7 +703,10 @@ li {
 }
 
 .section1 .sidebar1 .card-sidebar1 .card-header1 {
-  text-align: center;
+  text-align : center;
+  font-size  : 20px;
+  font-weight: 400;
+  text-align : center;
 }
 
 .section1 .sidebar1 .card-sidebar1 .card-header1 .img1 {
@@ -461,6 +719,9 @@ li {
 
 .section1 .sidebar1 .card-sidebar1 .card-body1 p {
   text-indent: 15px;
+  font-size  : 16px;
+  font-weight: 400;
+  text-align : justify;
 }
 
 .section1 .sidebar2 {
@@ -475,7 +736,10 @@ li {
 }
 
 .section1 .sidebar2 .card-sidebar2 .card-header2 {
-  text-align: center;
+  text-align : center;
+  font-size  : 20px;
+  font-weight: 400;
+  text-align : center;
 }
 
 .section1 .sidebar2 .card-sidebar2 .card-header2 .img2 {
@@ -488,6 +752,9 @@ li {
 
 .section1 .sidebar2 .card-sidebar2 .card-body2 p {
   text-indent: 15px;
+  font-size  : 16px;
+  font-weight: 400;
+  text-align : justify;
 }
 
 .section1 .widget {
@@ -499,7 +766,7 @@ li {
 
 .section1 .widget h5 {
   text-align : center;
-  font-size  : 1.4rem;
+  font-size  : 20px;
   font-weight: 400;
 }
 
@@ -509,9 +776,9 @@ li {
 
 .container-widget {
   margin-top           : 0;
-  margin-bottom        : 0.6rem;
+  margin-bottom        : 10px;
   display              : grid;
-  grid-gap             : 0.3rem;
+  grid-gap             : 1px;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows   : repeat(2, auto);
 }
@@ -551,15 +818,20 @@ li {
   margin     : 0.3rem;
 }
 
+.container-widget span {
+  font-size: 18px;
+}
+
 .section1 .feet {
-  grid-column: 1/7;
-  grid-row   : 4/4;
-  padding    : 0.3rem;
-  position   : relative;
-  margin     : 0.9rem 0 0 0.9rem;
-  height     : 9.375rem;
-  width      : 100%;
-  bottom     : 0;
+  grid-column    : 1/7;
+  grid-row       : 4/4;
+  padding        : 0;
+  position       : relative;
+  height         : 150px;
+  width          : 100%;
+  margin-top     : 80px;
+  margin-left    : -60px;
+  justify-content: center;
 }
 
 /*Slider Clientes - Nosotros*/
@@ -567,8 +839,8 @@ li {
   width          : 95vw;
   justify-content: center;
   height         : auto;
-  margin-left    : 0.6rem;
-  margin-top     : 1.6rem;
+  margin-left    : 0.5%;
+  margin-top     : 5px;
   overflow       : hidden;
   position       : absolute;
 }
@@ -581,7 +853,7 @@ li {
 }
 
 .slider .slide {
-  width: 12.5rem;
+  width: 70vw;
 }
 
 .slider .slide img {
@@ -601,29 +873,30 @@ li {
 }
 
 
+
 /*======================================================*/
 /*Sección 2 -- Servicios*/
 .section2 {
   width                : 100%;
-  margin-top           : 2rem;
   display              : grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows   : repeat(4, auto);
+  padding              : 30px 100px;
 }
 
 .section2 .img_jds {
-  width      : 90%;
-  height     : 10.625rem;
-  grid-column: 1/4;
-  grid-row   : 1/1;
-
-  position : relative;
-  top      : 7.5rem;
-  left     : 5%;
-  transform: translateY(-50%);
-  z-index  : 1;
-
-  margin-bottom: 0.6rem;
+  width          : 95%;
+  height         : 10.625rem;
+  grid-column    : 1/4;
+  grid-row       : 1/1;
+  justify-content: center;
+  align-items    : center;
+  top            : 50%;
+  left           : 2.5%;
+  position       : relative;
+  transform      : translateY(-50%);
+  z-index        : 1;
+  margin-bottom  : 0.6rem;
 }
 
 /*Slider Servicios*/
@@ -673,12 +946,10 @@ li {
 }
 
 .section2 .nserv h4 {
-  text-align   : center;
-  font-size    : 1.6rem;
-  font-weight  : 500;
-  font-family  : "Heebo", sans-serif;
-  margin-top   : 15px;
-  margin-bottom: 5px;
+  text-align : center;
+  font-size  : 1.6rem;
+  font-weight: 700;
+  margin     : 10px 0px;
 }
 
 .section2 .serv {
@@ -690,6 +961,8 @@ li {
   display              : grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows   : repeat(2, 1fr);
+
+  justify-content: space-evenly;
 }
 
 .section2 .serv .card-serv1 {
@@ -733,11 +1006,11 @@ li {
 
 @keyframes rebote {
   0% {
-    transform: translateX(15%);
+    transform: translateX(17%);
   }
 
   100% {
-    transform: translateX(190%);
+    transform: translateX(230%);
   }
 }
 
@@ -745,12 +1018,15 @@ li {
 .section2 .serv .card-serv2,
 .section2 .serv .card-serv3,
 .section2 .serv .card-serv5 {
-  width        : 350px;
+  width        : 450px;
   height       : 300px;
   border       : 2px solid;
   border-color : rgb(236, 80, 0);
   border-radius: 10px;
   margin       : auto;
+  box-shadow: 0px 2px 60px 20px rgba(236,80,0,0.3);
+-webkit-box-shadow: 0px 2px 60px 20px rgba(236,80,0,0.3);
+-moz-box-shadow: 0px 2px 60px 20px rgba(236,80,0,0.3);
 
   margin-top         : 0.3rem;
   position           : relative;
@@ -762,6 +1038,7 @@ li {
   display        : flex;
   justify-content: center;
   border-bottom  : 0.5px solid #ec5000;
+  background     : transparent;
 }
 
 .card-header img {
@@ -776,26 +1053,31 @@ li {
   text-align : center;
   margin     : auto;
   font-size  : 1.3rem;
-  font-weight: 500;
-  font-family: "Heebo", sans-serif;
+  font-weight: 700;
 }
 
 .card-body p {
-  text-align: justify;
-  margin    : 10px;
+  text-indent: 15px;
+  text-align : justify;
+  font-size  : 16px;
+  font-weight: 400;
+  margin     : 10px 15px 20px;
 }
 
 .card-footer {
-  display : flex;
-  position: absolute;
-  bottom  : 5px;
-  right   : 5px;
+  display   : flex;
+  position  : absolute;
+  bottom    : 2px;
+  right     : 5px;
+  background: transparent;
+  border    : none;
 }
 
 .lbl-modal {
-  cursor   : pointer;
-  color    : blue;
-  font-size: 0.9rem;
+  cursor     : pointer;
+  color      : #2c4290;
+  font-size  : 0.8rem;
+  font-weight: 700;
 }
 
 .container-btn {
@@ -849,7 +1131,7 @@ li {
   color      : black;
   text-align : center;
   font-size  : 1.2rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .container-modal label,
@@ -859,7 +1141,7 @@ li {
   position   : absolute;
   top        : 0.6rem;
   right      : 0.6rem;
-  color      : blue;
+  color      : #2c4290;
   font-size  : 0.9rem;
   font-weight: 400;
   cursor     : pointer;
@@ -873,6 +1155,8 @@ li {
 
 .contenido-modal p {
   text-indent: 15px;
+  font-size  : 16px;
+  font-weight: 400;
 }
 
 #btn-modal,
@@ -897,109 +1181,12 @@ li {
   transform: translateY(0%);
 }
 
-.icon-f {
-  text-decoration : none;
-  padding         : 0.19rem;
-  margin          : 0.3rem;
-  width           : 3rem;
-  height          : 3rem;
-  background-color: #2c4290;
-  color           : #fff;
-  border-radius   : 50%;
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
-  box-shadow      : 0.3rem 0.3rem 0.6rem #14235a, -0.3rem -0.3rem 0.6rem #466bf0e1;
-
-  transition-property: outline-offset, outline-color, background-color;
-  transition-duration: 0.25s;
-
-  cursor: pointer;
-}
-
-.icon--instagram:hover {
-  background-image: radial-gradient(circle at 30% 107%,
-      #fdf497 0%,
-      #fdf497 5%,
-      #fd5949 45%,
-      #d6249f 60%,
-      #285aeb 90%);
-  outline-color: #a02d76;
-  color        : #fff;
-  border-radius: 50%;
-}
-
-.icon--facebook:hover {
-  background-color: rgb(44, 104, 255);
-  outline-color   : rgb(44, 104, 255);
-  color           : #fff;
-  border-radius   : 50%;
-}
-
-.icon--whatsapp:hover {
-  background-color: #2ea44f;
-  outline-color   : #2ea44f;
-  color           : #fff;
-  border-radius   : 50%;
-}
-
-.icon--mail:hover {
-  background-color: red;
-  outline-color   : red;
-  color           : #fff;
-  border-radius   : 50%;
-}
-
-.icon-f1 {
-  text-decoration : none;
-  padding         : 0.19rem;
-  margin          : 0.3rem;
-  width           : 5rem;
-  height          : 5rem;
-  background-color: transparent;
-  color           : #000;
-  border-radius   : 50%;
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
-  box-shadow      : 0.3rem 0.3rem 0.6rem rgba(41, 19, 4, 0.191),
-    -0.3rem -0.3rem 0.6rem rgba(223, 174, 138, 0.191);
-  cursor: pointer;
-}
-
-.icon {
-  font-size    : 2rem;
-  margin       : 1rem 0;
-  border-radius: 50%;
-}
-
-.footer1 {
-  margin-top: 0.5rem;
-}
-
-.wrapper--footer {
-  display        : flex;
-  justify-content: center;
-  align-content  : center;
-  padding        : 0 6rem;
-}
-
-.link {
-  margin: 0.6rem;
-}
-
-
-/*======================================================*/
-/*Pages -- contacto/job*/
-.page-adic {
-  position: relative;
-}
 
 
 /*======================================================*/
 /*Page -- contacto*/
 .container--contacto {
-  padding              : 3rem;
+  padding              : 100px;
   width                : 100%;
   display              : grid;
   grid-gap             : 0.6rem;
@@ -1016,20 +1203,24 @@ li {
 .container--contacto .contactanos .main h1 {
   margin-top   : 0.3rem;
   margin-bottom: 1.9rem;
-  font-size    : 2rem;
+  font-size    : 40px;
+  font-weight  : 700;
+  text-align   : center;
+}
+
+.container--contacto .contactanos .main h2 {
+  font-size  : 30px;
+  font-weight: 700;
+  text-align : center;
 }
 
 .container--contacto .contactanos .main p {
-  width      : 95%;
-  margin     : 3rem 2rem 3rem 1.3rem;
-  font-size  : 0.9rem;
+  width      : 100%;
+  font-size  : 16px;
+  font-weight: 400;
+  text-align : justify;
   text-indent: 15px;
-}
-
-.container--contacto .contactanos .main h1,
-h2,
-p {
-  text-align: center;
+  padding    : 20px;
 }
 
 .container--contacto .contactanos form {
@@ -1043,17 +1234,19 @@ p {
   grid-template-columns: 1fr 1fr;
 }
 
-.container--contacto .contactanos form p {
-  margin    : 0 0.6rem;
-  padding   : 0.6rem;
-  text-align: left;
-}
-
 .container--contacto .contactanos form label {
   color        : black;
-  font-size    : 0.9rem;
-  font-weight  : 500;
+  font-size    : 15px;
+  font-weight  : 700;
   margin-bottom: 0.438rem;
+  text-align   : left;
+  padding      : 5px 0;
+}
+
+.container--contacto .contactanos form span {
+  font-size  : 13px;
+  font-weight: 400;
+  color      : red;
 }
 
 .container--contacto .contactanos form .block {
@@ -1065,10 +1258,11 @@ p {
 .container--contacto .contactanos form input,
 .container--contacto .contactanos form textarea,
 .container--contacto .contactanos form .btn {
-  width        : 100%;
-  padding      : 0.3rem;
-  background   : transparent;
-  outline      : none; /*para que no se ponga el borde cuando escribimos*/
+  width     : 100%;
+  padding   : 0.3rem;
+  background: transparent;
+  outline   : none;
+  /*para que no se ponga el borde cuando escribimos*/
 }
 
 .container--contacto .contactanos form .btn {
@@ -1084,8 +1278,8 @@ p {
   padding            : 0.9rem;
   transition-property: background;
   /*define que propiedad sufre la transición*/
-  width              : 10.625rem;
-  height             : 3rem;
+  width              : 200px;
+  height             : 50px;
 }
 
 .container--contacto .contactanos form .btn:hover,
@@ -1109,8 +1303,152 @@ textarea::placeholder {
 
 .container--contacto .contactanos form .form-txt a {
   color          : #2c4290;
-  font-size      : 0.9rem;
-  font-weight    : 600;
+  font-size      : 15px;
+  font-weight    : 700;
+  text-decoration: none;
+  /*eliminar la linea de los enlaces*/
+}
+
+.container--contacto .contactanos form textarea {
+  width : 100%;
+  border: 1px dashed rgba(128, 128, 128, 0.3);
+}
+
+.container--contacto .mapp {
+  grid-column: 2/3;
+  grid-row   : 1/1;
+}
+
+.container--contacto .mapp h5 {
+  text-align : center;
+  font-size  : 25px;
+  font-weight: 400;
+  margin     : 0;
+}
+
+.container--contacto .mapp h2 {
+  text-align : center;
+  font-size  : 30px;
+  font-weight: 700;
+  margin     : 0;
+}
+
+.container--contacto .mapp .contac1 {
+  display   : block;
+  text-align: center;
+  padding   : 0;
+  margin-top: 3rem;
+}
+
+.container--contacto .mapp .form-txt1 {
+  color      : #2c4290;
+  font-size  : 18px;
+  font-weight: 700;
+  margin     : 5px;
+}
+
+.container--contacto .mapp .contac2 {
+  display        : flex;
+  justify-content: center;
+  padding        : 1.3rem;
+}
+
+.container--contacto .mapp .contac3 {
+  display   : block;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+.container--contacto .mapp .contac3 .mapp-google {
+  margin-top: 0.9rem;
+}
+
+
+
+
+/*======================================================*/
+/*Page Job*/
+.main_job {
+  padding: 0;
+  margin : 0;
+  height : 320px;
+}
+
+.main_job .img-container {
+  width   : 100%;
+  height  : 400px;
+  position: relative;
+  overflow: hidden;
+  top     : -5rem;
+}
+
+.main_job img {
+  width : 100%;
+  height: 59.375rem;
+}
+
+.main_job .contenedor-job1 {
+  position : absolute;
+  top      : 200px;
+  left     : 30%;
+  transform: translateY(-50%);
+  z-index  : 2;
+  color    : #fff;
+}
+
+.main_job .contenedor-job1 h1 {
+  font-size  : 3.2rem;
+  font-weight: 700;
+  text-align : center;
+}
+
+.container--job {
+  width                : 100%;
+  display              : grid;
+  grid-gap             : 0.6rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows   : repeat(1, auto);
+  padding              : 10px 100px 50px;
+
+}
+
+.container--job .info--job {
+  grid-column: 1/2;
+  grid-row   : 1/1;
+  padding    : 0 20px;
+}
+
+.container--job .info--job h3 {
+  font-size  : 35px;
+  font-weight: 700;
+  text-align : center;
+  margin     : 20px 10px 10px;
+}
+
+.container--job .info--job h4 {
+  font-size    : 30px;
+  font-weight  : 700;
+  text-align   : center;
+  margin-bottom: 10px;
+}
+
+.container--job .info--job p {
+  text-align : justify;
+  margin     : 0.9rem 2rem 0 1.3rem;
+  font-size  : 16px;
+  font-weight: 400;
+  text-indent: 15px;
+}
+
+.container--job .info--job ul {
+  margin-left: 6rem;
+  margin-top : 1.3rem;
+}
+
+.container--job .info--job a {
+  color          : #2c4290;
+  font-size      : 16px;
+  font-weight    : 700;
   text-decoration: none;
   /*eliminar la linea de los enlaces*/
 }
@@ -1134,213 +1472,40 @@ textarea::placeholder {
   border-radius: 0.9rem 0;
 }
 
-/*control general*/
-.input-control {
-  display: flex;
-  flex-direction: column;
-  margin: 0 5px;
-}
-
-.input-control input {
-border-bottom: 0.06rem solid black;
-/* border: 2px solid #f0f0f0;
-border-radius: 4px; */
-display: block;
-font-size: 12px;
-padding: 10px;
-width: 95%;
-}
-
-.input-control input:focus {
-  outline: 0;
-}
-
-.input-control.success input {
-  border-color: #09c372;
-}
-
-.input-control.error input {
-  border-color: #ff3860;
-}
-
-.input-control .error {
-  color: #ff3838;
-  font-size: 10px;
-  height: 13px;
-}
-
-
-
-/*Para que sea funcional se abre la siguiente API
-    https://formsubmit.co/
-    action="https://formsubmit.co/your@email.com" method="POST" -- pegado en el form
-*/
-
-.container--contacto .mapp {
-  grid-column: 2/3;
-  grid-row   : 1/1;
-}
-
-.container--contacto .mapp h5,
-h2 {
-  text-align   : center;
-  font-size    : 1.3rem;
-  margin-bottom: 1.3rem;
-}
-
-.container--contacto .mapp .contac1 {
-  display   : block;
-  text-align: center;
-  padding   : 0;
-  margin-top: 3rem;
-}
-
-.container--contacto .mapp .contac1 .txt {
-  margin: 1.3rem;
-}
-
-.container--contacto .mapp .form-txt1 {
-  color    : blue;
-  font-size: 0.8rem;
-}
-
-.container--contacto .mapp .contac2 {
-  display        : flex;
-  justify-content: center;
-  padding        : 1.3rem;
-}
-
-.container--contacto .mapp .contac3 {
-  display   : block;
-  text-align: center;
-  margin-top: 0.6rem;
-}
-
-.container--contacto .mapp .contac3 p {
-  font-size  : 1.3rem;
-  font-weight: 700;
-}
-
-.container--contacto .mapp .contac3 .mapp-google {
-  margin-top: 0.9rem;
-}
-
-
-/*======================================================*/
-/*Page Job*/
-.main_job .img-container {
-  width   : 100%;
-  height  : 400px;
-  position: relative;
-  overflow: hidden;
-  top     : -5rem;
-}
-
-.main_job img {
-  width : 100%;
-  height: 59.375rem;
-}
-
-.main_job .contenedor-job1 {
-  position : absolute;
-  top      : 12.5rem;
-  left     : 25%;
-  transform: translateY(-50%);
-  z-index  : 2;
-  color    : #fff;
-}
-
-.main_job .contenedor-job1 h1 {
-  font-size  : 3rem;
-  font-weight: 700;
-  font-family: "Heebo", sans-serif;
-  text-align : center;
-}
-
-.container--job {
-  padding              : 3rem;
-  width                : 100%;
-  display              : grid;
-  grid-gap             : 0.6rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows   : repeat(1, auto);
-}
-
-.container--job .info--job {
-  grid-column: 1/2;
-  grid-row   : 1/1;
-}
-
-.container--job .info--job h3 {
-  font-size    : 1.6rem;
-  font-weight  : 500;
-  font-family  : "Heebo", sans-serif;
-  text-align   : center;
-  margin-bottom: 0.9rem;
-  margin       : 1.3rem;
-}
-
-.container--job .info--job h4 {
-  font-size    : 1.3rem;
-  font-weight  : 500;
-  font-family  : "Heebo", sans-serif;
-  text-align   : center;
-  margin-bottom: 0.9rem;
-}
-
-.container--job .info--job p {
-  text-align : justify;
-  margin     : 0.9rem 2rem 0 1.3rem;
-  font-size  : 0.9rem;
-  text-indent: 15px;
-}
-
-.container--job .info--job ul {
-  margin-left: 6rem;
-  margin-top : 1.3rem;
-}
-
-.container--job .info--job a {
-  color          : #2c4290;
-  font-size      : 0.8rem;
-  text-decoration: none;
-  /*eliminar la linea de los enlaces*/
-}
-
 .container--job .form--job {
   grid-column: 2/3;
   grid-row   : 1/1;
+  padding    : 0 20px;
 }
 
 .container--job .form--job>h4 {
-  font-size    : 20px;
-  font-weight  : 500;
-  font-family  : "Heebo", sans-serif;
+  font-size    : 25px;
+  font-weight  : 400;
   text-align   : center;
-  margin-bottom: 0.9rem;
+  margin-bottom: 15px;
 }
 
 .container--job .form--job form {
-  box-shadow   : 0 0 1.3rem rgba(0, 0, 0, 0.3);
-  border-radius: 1.3rem;
-
+  box-shadow           : 0 0 1.3rem rgba(0, 0, 0, 0.3);
+  border-radius        : 1.3rem;
   display              : grid;
   grid-template-columns: 1fr 1fr;
-
-  padding: 5px;
-}
-
-.container--job .form--job form p {
-  margin    : 0 5px;
-  padding   : 5px;
-  text-align: left;
+  padding              : 15px 20px;
 }
 
 .container--job .form--job form label {
   color        : black;
-  font-size    : 0.9rem;
-  font-weight  : 600;
+  font-size    : 15px;
+  font-weight  : 700;
   margin-bottom: 0.438rem;
+  text-align   : left;
+  padding      : 5px 0;
+}
+
+.container--job .form--job form span {
+  font-size  : 13px;
+  font-weight: 400;
+  color      : red;
 }
 
 .container--job .form--job form .block {
@@ -1360,6 +1525,17 @@ h2 {
   /*para que no se ponga el borde cuando escribimos*/
 }
 
+.acepto {
+  padding   : 0;
+  margin-top: -7px;
+}
+
+.boton-job {
+  padding   : 0;
+  margin-top: -12px;
+  display   : none;
+}
+
 .container--job .form--job form .btn {
   background         : #ec5000;
   color              : #fbfcfd;
@@ -1374,9 +1550,9 @@ h2 {
   padding            : 0.9rem;
   transition-property: background;
   /*define que propiedad sufre la transición*/
-  width              : 10.625rem;
-  height             : 3rem;
-  margin-top         : 1.3rem;
+  width              : 200px;
+  height             : 50px;
+  margin-top         : 5px;
 }
 
 .container--job .form--job form .btn:hover,
@@ -1395,168 +1571,11 @@ textarea::placeholder {
 
 .container--job .form--job form small {
   color          : #2c4290;
-  font-size      : 0.9rem;
+  font-size      : 14px;
   text-decoration: none;
   /*eliminar la linea de los enlaces*/
 }
 
-
-/*======================================================*/
-/*enlaces-footer*/
-
-.container-footer {
-  width                : 100%;
-  display              : grid;
-  grid-gap             : 0.6rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows   : repeat(2, auto);
-
-  bottom    : 0;
-  background: #2c4290;
-
-  grid-template-areas:
-    "logo-footer social-footer contacto-footer"
-    "logo-footer copy-footer copy-footer";
-}
-
-.container-footer .logo-footer {
-  grid-area : logo-footer;
-  text-align: center;
-  position  : relative;
-}
-
-.container-footer .logo-footer .logo {
-  /*para centrar la imagen*/
-  position : absolute;
-  top      : 50%;
-  right    : 50%;
-  transform: translate(50%, -50%);
-}
-
-.container-footer .logo-footer .logo img {
-  width : 9.375rem;
-  height: 9.375rem;
-}
-
-.container-footer .enlaces-footer {
-  grid-area: enlaces-footer;
-  margin   : auto;
-}
-
-.container-footer .contacto-footer {
-  grid-area : contacto-footer;
-  text-align: center;
-  padding   : 0.6rem;
-}
-
-.container-footer .redes_sociales {
-  grid-area      : social-footer;
-  display        : flex;
-  text-align     : center;
-  margin-top     : 1.3rem;
-  color          : white;
-  justify-content: center;
-}
-
-.container-footer .copy-footer {
-  grid-area : copy-footer;
-  text-align: right;
-  margin    : auto;
-}
-
-.container-footer .job-text0 {
-  font-size  : 1rem;
-  font-weight: 400;
-  font-family: "Heebo", sans-serif;
-  color      : white;
-  text-align : center;
-}
-
-.container-footer .job-text {
-  font-size     : 0.8rem;
-  font-weight   : 300;
-  line-height   : 4px;
-  letter-spacing: 2px;
-  word-spacing  : 4px;
-  font-family   : "Heebo", sans-serif;
-  color         : white;
-  text-align    : center;
-}
-
-/*======================================================*/
-/*Boton Wsp*/
-.btn-wsp {
-  position     : fixed;
-  width        : 5.625rem;
-  height       : 5.625rem;
-  line-height  : 5.625rem;
-  bottom       : 10.625rem;
-  right        : 4.375rem;
-  background   : #0df053;
-  color        : #fff;
-  border-radius: 3rem;
-  font-size    : 4.688rem;
-  text-align   : center;
-  box-shadow   : 0 0.06rem 0.6rem rgba(0, 0, 0, 0.3);
-  z-index      : 100;
-
-  animation: efecto 1.2s infinite;
-}
-
-.btn-wsp:hover {
-  text-decoration: none;
-  /*para quitar el subrayado por defecto*/
-  color          : #0df053;
-  background     : #fff;
-
-  transform : scale(1.1);
-  /*Para que se agrande el icono*/
-  transition: 0.3s;
-}
-
-.icon-wsp {
-  width     : 4.375rem;
-  margin-top: 0.4rem;
-  transition: ease 1s;
-}
-
-@keyframes efecto {
-  0% {
-    box-shadow: 0 0 0 0 rgba(3, 200, 49, 0.85);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0.9rem rgba(3, 200, 49, 0);
-  }
-}
-
-/*======================================================*/
-/*Boton Up*/
-#btn-up {
-  width          : 3.75rem;
-  height         : 3.75rem;
-  background     : gray;
-  display        : flex;
-  justify-content: center;
-  align-items    : center;
-  color          : white;
-  border-radius  : 50%;
-  font-size      : 1.3rem;
-  position       : fixed;
-  bottom         : 6rem;
-  right          : 1.9rem;
-  cursor         : pointer;
-  border         : 0.3rem solid transparent;
-
-  transition: all 300ms ease;
-  transform : scale(0);
-  /*Transforma la escala a cero*/
-}
-
-#btn-up:hover {
-  background: #ec5000;
-  transform : scale(1.1);
-}
 
 
 /*======================================================*/
@@ -1579,7 +1598,7 @@ textarea::placeholder {
   .menu2 {
     background: rgba(44, 66, 144, 1);
     position  : fixed;
-    height    : 70px;
+    height    : 80px;
     width     : 100%;
   }
 
@@ -1605,18 +1624,17 @@ textarea::placeholder {
 
   nav {
     flex-direction: column;
-    padding-top   : 1%;
-    padding-bottom: 1%;
+    padding-top   : 2px;
+    padding-bottom: 2px;
   }
 
   .logonav {
-    width      : 14%;
-    position   : fixed;
-    top        : 0;
-    left       : 0;
-    margin-left: 2%;
-    margin-top : 2%;
-    z-index    : 100;
+    position: fixed;
+    top     : 0;
+    left    : 0;
+    margin  : 5px;
+    padding : auto;
+    z-index : 100;
   }
 
   .enlaces-menu {
@@ -1656,32 +1674,22 @@ textarea::placeholder {
     visibility: hidden;
   }
 
-  .text1 {
-    font-size: 0.9rem;
-  }
-
   .contenedor .slide-txt {
-    width      : 70%;
+    width      : 50%;
     display    : block;
-    margin-top : 32%;
+    margin-top : 17%;
     margin-left: -5%;
     padding    : 0;
   }
 
   .contenedor img {
-    width: 35%;
-  }
-
-  #text-tit {
-    display    : block;
-    line-height: 1.7rem;
+    display: none;
   }
 
   .contenedor .slide-txt h1,
   .context-slide ul li {
-    font-size  : 1.5rem;
+    font-size  : 40px;
     font-weight: 700;
-    font-family: "Heebo", sans-serif;
     text-align : center;
   }
 
@@ -1695,16 +1703,18 @@ textarea::placeholder {
     font-size: 2rem;
   }
 
-  .contenedor button {
-    bottom: 5%;
+  .boton {
+    width: 320px;
+    top  : 60%;
+    left : 20.5%;
   }
+
 
   .btn-wsp {
-    bottom : 33%;
-    right  : 1%;
+    bottom : 28%;
+    right  : 2%;
     z-index: 0;
   }
-
 
   .body {
     height    : 100vh;
@@ -1722,7 +1732,7 @@ textarea::placeholder {
     overflow-y: auto;
 
     padding   : 12% 6% 5% 0;
-    margin-top: 40px;
+    margin-top: 60px;
   }
 
   .section1 .contenido {
@@ -1734,6 +1744,7 @@ textarea::placeholder {
 
   .section1 .contenido p {
     text-indent: 12px;
+    font-size  : 17px;
   }
 
   .section1 .feet {
@@ -1797,6 +1808,10 @@ textarea::placeholder {
     text-align : left;
   }
 
+  .container-widget span {
+    font-size: 17px;
+  }
+
   .section1 .sidebar1 {
     grid-column: 1/8;
     grid-row   : 4/4;
@@ -1825,23 +1840,28 @@ textarea::placeholder {
     text-indent: 12px;
   }
 
+  .section2 {
+    padding: 15px;
+  }
+
   .section2 .img_jds {
     padding   : 0;
-    margin-top: 5px;
+    margin-top: 40px;
   }
 
   .slider2 {
-    top: 50;
+    top   : 50;
+    height: 160px;
   }
 
   .section2 .nserv {
-    margin-top: 2.5%;
+    margin-top: 20px;
   }
 
   .section2 .serv {
     display: block;
     margin : 0;
-    padding: 1% 5% 1% 4%;
+    padding: 0;
   }
 
   .section2 .serv .card-serv1,
@@ -1925,13 +1945,11 @@ textarea::placeholder {
     grid-column: 1/4;
     grid-row   : 2/2;
     margin     : 1% 0%;
-    color      : white;
   }
 
   .container-footer .copy-footer {
     grid-column: 1/4;
     grid-row   : 3/3;
-    color      : white;
   }
 
   #btn-up {
@@ -1941,7 +1959,7 @@ textarea::placeholder {
   .container--contacto {
     display: block;
     margin : 35px 0;
-    padding: 7px;
+    padding: 50px 10px;
   }
 
   .container--contacto .contactanos {
@@ -1955,15 +1973,17 @@ textarea::placeholder {
   }
 
   .container--contacto .contactanos .main p {
-    width        : 100%;
-    margin       : 0 50px 0 10px;
-    padding-right: 30px;
-    font-size    : 1rem;
-    text-indent  : 12px;
+    width      : 95%;
+    font-size  : 17px;
+    text-indent: 12px;
   }
 
   .container--contacto .contactanos form {
     padding: 5px;
+  }
+
+  .container--contacto .contactanos form label {
+    font-size: 15px;
   }
 
   .container--contacto .contactanos form input::placeholder,
@@ -1975,11 +1995,13 @@ textarea::placeholder {
   .container--contacto .mapp h5 {
     margin-top   : 50px;
     margin-bottom: 0%;
+    font-size    : 25px;
   }
 
   .container--contacto .mapp h2 {
     margin-top   : 0%;
     margin-bottom: 2%;
+    font-size    : 30px;
   }
 
   .container--contacto .mapp .contac1 {
@@ -1990,7 +2012,7 @@ textarea::placeholder {
 
   .container--contacto .mapp .contac1 .txt {
     margin   : 0;
-    font-size: 1rem;
+    font-size: 18px;
   }
 
   .container--contacto .mapp .contac2 {
@@ -2000,7 +2022,7 @@ textarea::placeholder {
   }
 
   .container--contacto .mapp .contac2 i {
-    font-size: 35px;
+    font-size: 37px;
   }
 
   .icon-f1 {
@@ -2039,14 +2061,14 @@ textarea::placeholder {
   }
 
   .main_job .contenedor-job1 h1 {
-    font-size    : 2rem;
+    font-size    : 35px;
     margin-bottom: 50px;
     line-height  : 1.7rem;
   }
 
   .container--job {
     display: block;
-    padding: 3px;
+    padding: 5px 5px 10px;
   }
 
   .container--job .form--job {
@@ -2058,7 +2080,7 @@ textarea::placeholder {
   }
 
   .container--job .info--job h3 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .container--job .info--job h4 {
@@ -2069,7 +2091,7 @@ textarea::placeholder {
     width        : 100%;
     margin       : 0 50px 0 10px;
     padding-right: 30px;
-    font-size    : 1rem;
+    font-size    : 17px;
     text-indent  : 12px;
   }
 
@@ -2077,10 +2099,9 @@ textarea::placeholder {
     margin-top: 15%;
   }
 
-  .container--job .form--job form input::placeholder,
+  input::placeholder,
   textarea::placeholder {
-    font-size     : 0.6rem;
-    letter-spacing: 0.8px;
+    font-size: 11px;
   }
 
 }
@@ -2102,8 +2123,9 @@ textarea::placeholder {
   .menu2 {
     background: rgba(44, 66, 144, 1);
     position  : fixed;
-    height    : 70px;
+    height    : 80px;
     width     : 100%;
+
   }
 
   .ham {
@@ -2166,8 +2188,11 @@ textarea::placeholder {
   .enlaces-menu li {
     text-align: center;
     width     : 100%;
-    font-size : 100%;
     margin    : 2px;
+  }
+
+  .enlaces-menu li a {
+    font-size: 20px;
   }
 
   .sitios {
@@ -2177,10 +2202,6 @@ textarea::placeholder {
   .menu-vertical {
     display   : none;
     visibility: hidden;
-  }
-
-  .text1 {
-    font-size: 0.9rem;
   }
 
   .contenedor .slide-txt {
@@ -2197,12 +2218,12 @@ textarea::placeholder {
 
   #text-tit {
     display    : block;
-    line-height: 1.7rem;
+    line-height: 42px;
   }
 
   .contenedor .slide-txt h1,
   .context-slide ul li {
-    font-size: 2rem;
+    font-size: 40px;
   }
 
   .contenedor .context-slide {
@@ -2223,8 +2244,7 @@ textarea::placeholder {
   .contenedor button {
     position: absolute;
     bottom  : 50%;
-    right   : 5%;
-    ;
+    right   : 25%;
   }
 
   .btn-wsp {
@@ -2250,12 +2270,11 @@ textarea::placeholder {
     display              : grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows   : repeat(5, auto);
+    height               : 100vh;
+    overflow-y           : auto;
 
-    height    : 100vh;
-    overflow-y: auto;
-
-    padding   : 40px 35px 80px 10px;
-    margin-top: 40px;
+    padding: 90px 30px 90px 10px;
+    margin : 0;
   }
 
   .section1 .contenido {
@@ -2292,7 +2311,8 @@ textarea::placeholder {
   }
 
   .section1 .widget h5 {
-    margin: 40px 0 20px 0;
+    margin   : 40px 0 20px 0;
+    font-size: 27px;
   }
 
   .container-widget .widget1 {
@@ -2336,12 +2356,19 @@ textarea::placeholder {
     margin-top : 5%
   }
 
+  .section1 .sidebar1 .card-header1 span,
+  .section1 .sidebar2 .card-header2 span {
+    font-size: 25px;
+  }
+
   .section1 .sidebar1 .card-sidebar1 .card-body1 {
     margin: 12px 5px;
   }
 
-  .section1 .sidebar1 .card-sidebar1 .card-body1 p {
+  .section1 .sidebar1 .card-sidebar1 .card-body1 p,
+  .section1 .sidebar2 .card-sidebar2 .card-body2 p {
     text-indent: 12px;
+    font-size  : 18px;
   }
 
   .section1 .sidebar2 {
@@ -2354,8 +2381,9 @@ textarea::placeholder {
     margin: 12px 5px;
   }
 
-  .section1 .sidebar2 .card-sidebar2 .card-body2 p {
-    text-indent: 12px;
+  .section2 {
+    padding: 70px 20px 30px;
+    margin : 0;
   }
 
   .section2 .img_jds {
@@ -2368,23 +2396,34 @@ textarea::placeholder {
   }
 
   .section2 .nserv {
-    margin-top: 2.5%;
+    margin-top: 15px;
+  }
+
+  .section2 .nserv h4 {
+    font-size: 30px;
   }
 
   .section2 .serv {
     display: block;
     margin : 0;
-    padding: 1% 5% 1% 4%;
+    padding: 0;
   }
 
   .section2 .serv .card-serv1,
   .section2 .serv .card-serv2,
   .section2 .serv .card-serv3,
   .section2 .serv .card-serv5 {
-    margin : 1% 1% 1%;
+    margin : 10px auto;
     padding: 1% 5% 1%;
     width  : 90vw;
     height : auto;
+  }
+
+  .section2 .serv .card-serv1 .card-header,
+  .section2 .serv .card-serv2 .card-header,
+  .section2 .serv .card-serv3 .card-header,
+  .section2 .serv .card-serv5 .card-header {
+    font-size: 30px;
   }
 
   .section2 .serv .card-serv1 .card-body,
@@ -2392,6 +2431,13 @@ textarea::placeholder {
   .section2 .serv .card-serv3 .card-body,
   .section2 .serv .card-serv5 .card-body {
     margin-bottom: 30px;
+  }
+
+  .section2 .serv .card-serv1 .card-body p,
+  .section2 .serv .card-serv2 .card-body p,
+  .section2 .serv .card-serv3 .card-body p,
+  .section2 .serv .card-serv5 .card-body p {
+    font-size: 20px;
   }
 
   .section2 .serv .card-serv1 .card-footer,
@@ -2413,9 +2459,8 @@ textarea::placeholder {
   }
 
   .lbl-modal {
-    font-size  : 0.9rem;
+    font-size  : 15px;
     margin-left: 30px;
-
   }
 
   .container-modal,
@@ -2437,11 +2482,18 @@ textarea::placeholder {
   .container-modal2 .contenido-modal,
   .container-modal3 .contenido-modal,
   .container-modal4 .contenido-modal {
-    padding   : 0 30px 20px 15px;
-    margin    : 2% 7% 5% 3%;
+    padding   : 20px;
+    margin    : 0;
     width     : 100%;
     height    : 45vh;
     overflow-y: auto;
+  }
+
+  .container-modal .contenido-modal p,
+  .container-modal2 .contenido-modal p,
+  .container-modal3 .contenido-modal p,
+  .container-modal4 .contenido-modal p {
+    font-size: 20px;
   }
 
   .container-footer .logo-footer {
@@ -2451,20 +2503,18 @@ textarea::placeholder {
   .container-footer .redes_sociales {
     grid-column: 1/4;
     grid-row   : 1/1;
-    margin     : 0;
+    margin-top : 10px;
   }
 
   .container-footer .contacto-footer {
     grid-column: 1/4;
     grid-row   : 2/2;
     margin     : 1% 0%;
-    color      : white;
   }
 
   .container-footer .copy-footer {
     grid-column: 1/4;
     grid-row   : 3/3;
-    color      : white;
   }
 
   #btn-up {
@@ -2473,8 +2523,8 @@ textarea::placeholder {
 
   .container--contacto {
     display: block;
-    margin : 35px 0;
-    padding: 7px;
+    margin : 0;
+    padding: 80px 20px 50px;
   }
 
   .container--contacto .contactanos {
@@ -2484,35 +2534,35 @@ textarea::placeholder {
   }
 
   .container--contacto .contactanos .main h1 {
-    margin: 2px;
+    margin   : 2px;
+    font-size: 35px;
   }
 
   .container--contacto .contactanos .main p {
-    width        : 100%;
-    margin       : 0 50px 0 10px;
-    padding-right: 30px;
-    font-size    : 1rem;
-    text-indent  : 12px;
+    width      : 100%;
+    font-size  : 20px;
+    text-indent: 12px;
   }
 
   .container--contacto .contactanos form {
-    padding: 5px;
+    padding: 10px;
   }
 
   .container--contacto .contactanos form input::placeholder,
-  textarea::placeholder {
-    font-size     : 0.9rem;
-    letter-spacing: 0.8px;
+  .container--contacto .contactanos form textarea::placeholder {
+    font-size: 15px;
   }
 
   .container--contacto .mapp h5 {
     margin-top   : 50px;
     margin-bottom: 0%;
+    font-size    : 27px;
   }
 
   .container--contacto .mapp h2 {
     margin-top   : 0%;
     margin-bottom: 2%;
+    font-size    : 30px;
   }
 
   .container--contacto .mapp .contac1 {
@@ -2523,7 +2573,7 @@ textarea::placeholder {
 
   .container--contacto .mapp .contac1 .txt {
     margin   : 0;
-    font-size: 1rem;
+    font-size: 25px;
   }
 
   .container--contacto .mapp .contac2 {
@@ -2575,15 +2625,14 @@ textarea::placeholder {
   }
 
   .main_job .contenedor-job1 h1 {
-    font-size    : 2rem;
+    font-size    : 45px;
     margin-bottom: 50px;
     line-height  : 1.7rem;
   }
 
   .container--job {
-    display   : block;
-    padding   : 5px;
-    margin-top: 140px;
+    display: block;
+    padding: 0 10px 50px;
   }
 
   .container--job .form--job {
@@ -2597,18 +2646,18 @@ textarea::placeholder {
   }
 
   .container--job .info--job h3 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .container--job .info--job h4 {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .container--job .info--job p {
     width        : 100%;
     margin       : 0 50px 0 10px;
     padding-right: 30px;
-    font-size    : 1rem;
+    font-size    : 18px;
     text-indent  : 12px;
   }
 
@@ -2617,8 +2666,8 @@ textarea::placeholder {
   }
 
   .container--job .form--job form input::placeholder,
-  textarea::placeholder {
-    font-size     : 0.9rem;
+  .container--job .form--job form textarea::placeholder {
+    font-size     : 15px;
     letter-spacing: 0.8px;
   }
 
@@ -3772,15 +3821,15 @@ textarea::placeholder {
   .menu,
   .menu1,
   .menu2 {
-    padding        : 0;
-    margin         : 0 10px 0 0;
-    justify-content: space-around;
+    padding        : 0 20px;
+    margin         : 0;
+    justify-content: space-between;
   }
 
   .menu-horizontal {
     padding-top  : 0.5%;
     padding-right: 0.5%;
-    width        : 73%;
+    width        : 55%;
     margin       : 0px;
   }
 
@@ -3791,8 +3840,7 @@ textarea::placeholder {
   }
 
   .logonav {
-    width : 7%;
-    margin: 1% 0% 0% 10%;
+    width: 60px;
   }
 
   .menu-vertical {
@@ -3809,81 +3857,107 @@ textarea::placeholder {
     overflow: auto;
   }
 
+  .contenedor .slide-txt {
+    width     : 700px;
+    display   : block;
+    margin-top: 17%;
+    padding   : 0;
+  }
+
+  .contenedor .slide-txt h1,
+  .context-slide ul li {
+    font-size  : 60px;
+    font-weight: 700;
+    text-align : center;
+    margin-top : 70px;
+  }
+
+  .contenedor .context-slide ul {
+    width      : 350px;
+    height     : 90px;
+    margin-left: 50%;
+  }
+
+  .contenedor .context-slide li {
+    font-size: 40px;
+  }
+
+  .boton {
+    width: 320px;
+    top  : 60%;
+    left : 70%;
+  }
+
   .section1 {
-    padding-top: 5px;
+    padding   : 0;
+    margin    : 0;
   }
 
   .section1 .contenido {
-    margin-left : 20%;
-    margin-top  : 20px;
-    margin-right: 2%;
-    padding     : 0;
+    padding: 10px 10px 10px 35px;
+    margin : 0;
   }
 
-  .section1 p,
-  .section1 span {
-    font-size  : 95%;
-    line-height: 100%;
+  .section1 .contenido p {
+    font-size: 16px;
   }
 
   .section1 .sidebar1,
   .section1 .sidebar2 {
-    padding      : 0;
-    margin-top   : 5%;
-    margin-bottom: 5px;
+    padding: 0;
+    width  : 350px;
   }
 
-  .section1 .sidebar1 {
-    margin-right: 15px;
-  }
-
-  .section1 .sidebar1 span {
-    font-size: 150%;
-  }
-
-  .section1 .sidebar2 {
-    margin-right : 50px;
-    margin-left  : 0;
-    padding-right: 10px;
-  }
-
+  .section1 .sidebar1 span,
   .section1 .sidebar2 span {
-    font-size: 150%;
+    font-size  : 18px;
+    font-weight: 700;
+  }
+
+  .section1 .sidebar1 p,
+  .section1 .sidebar2 p {
+    font-size  : 15px;
+    font-weight: 400;
   }
 
   .section1 .sidebar1 .card-sidebar1 .card-body1,
   .section1 .sidebar2 .card-sidebar2 .card-body2 {
-    margin-top  : 1.3rem;
-    margin-left : 0.9rem;
-    margin-right: 1.9rem;
+    margin: 5px;
   }
 
   .section1 .widget {
-    padding      : 10px;
-    margin-bottom: 1%;
-    margin-top   : 20px;
+    padding      : 0;
+    margin: -40px 0 0 0;
+  }
+
+  .section1 .widget .container-widget .widget1, .section1 .widget .container-widget .widget2, .section1 .widget .container-widget .widget3, .section1 .widget .container-widget .widget4, .section1 .widget .container-widget .widget5 {
+    margin: 0;
+    padding: 0;
   }
 
   .section1 .widget h5 {
-    margin-top   : 2px;
-    margin-bottom: 2px;
+    margin: 1px;
+    padding: 0;
   }
 
   .section1 .widget span,
   .section1 .widget img {
-    margin    : auto;
+    margin    : 1px;
     padding   : 0;
     text-align: center;
-
+    font-size: 15px;
   }
 
   .container-widget {
-    margin: 10px 10px 0 5px;
+    margin: 0;
+    padding: 0;
   }
 
   .section1 .feet {
-    padding   : 1%;
-    margin-top: 0.5%;
+    padding        : 0;
+    margin-left    : 20px;
+    margin-top: 12px;
+    justify-content: center;
   }
 
   .slider {
@@ -3901,14 +3975,9 @@ textarea::placeholder {
   }
 
   .slider2 {
-    top           : 35px;
+    top           : 50px;
     margin-bottom : 0;
     padding-bottom: 0;
-  }
-
-  .section2 {
-    padding: 0;
-    margin : 0;
   }
 
   .section2 .img_jds {
@@ -3924,11 +3993,11 @@ textarea::placeholder {
   }
 
   .section2 .nserv {
-    margin-top: 2%;
+    margin-top: 5px;
   }
 
   .section2 .nserv h4 {
-    font-size: 180%;
+    font-size: 25px;
   }
 
   .section2 .serv {
@@ -3966,7 +4035,7 @@ textarea::placeholder {
   }
 
   .section2 .serv .card-body p {
-    font-size  : 95%;
+    font-size  : 15px;
     line-height: 100%;
   }
 
@@ -3986,12 +4055,8 @@ textarea::placeholder {
     }
   }
 
-  .section2 .serv p {
-    font-size: 95%;
-  }
-
   .lbl-modal {
-    font-size  : 105%;
+    font-size  : 14px;
     margin-left: 10rem;
   }
 
@@ -4009,13 +4074,17 @@ textarea::placeholder {
     font-size: 1.1rem;
   }
 
+  .contenido-modal p {
+    font-size: 15px;
+  }
+
   .section2 .serv .img-sello {
     width : 8rem;
     height: 8rem;
   }
 
   .container--contacto {
-    padding              : 10px 100px 30px;
+    padding              : 10px 70px 30px;
     grid-gap             : 5px;
     grid-template-columns: repeat(3, auto);
     grid-template-rows   : repeat(1, auto);
@@ -4030,12 +4099,14 @@ textarea::placeholder {
   .container--contacto .contactanos .main h1,
   .container--contacto .contactanos .main h2 {
     margin   : 1rem;
-    font-size: 1.9rem;
+    font-size: 35px;
+    font-weight: 700;
   }
 
   .container--contacto .contactanos .main p {
-    margin     : 20px 30px 20px 20px;
-    font-size  : 90%;
+    margin     : 0;
+    font-size  : 16px;
+    font-weight: 400;
     line-height: 100%;
   }
 
@@ -4047,12 +4118,13 @@ textarea::placeholder {
 
   .container--contacto .mapp h5 {
     margin-top: 10px;
+    font-size: 25px;
+    font-weight: 700;
   }
 
-  .container--contacto .mapp h5,
-  h2 {
+  .container--contacto .mapp h2 {
     margin-bottom: 0.7rem;
-    font-size    : 1.9rem;
+    font-size    : 35px;
   }
 
   .container--contacto .mapp .contac1 {
@@ -4060,7 +4132,7 @@ textarea::placeholder {
   }
 
   .container--contacto .mapp .contac1 span {
-    font-size: 90%;
+    font-size: 30px;
   }
 
   .container--contacto .mapp .contac2 {
@@ -4100,14 +4172,24 @@ textarea::placeholder {
     padding: 0 30px;
   }
 
+  .container--job .info--job h3 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .container--job .info--job h4 {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
   .container--job .info--job p {
-    margin     : 5px 15px 5px 10px;
-    font-size  : 95%;
+    margin: 0;
+    font-size  : 16px;
     line-height: 100%;
   }
 
   .container--job .info--job a {
-    font-size: 105%;
+    font-size: 16px;
   }
 
   .form--job {
@@ -4120,21 +4202,14 @@ textarea::placeholder {
   }
 
   .container-footer h4 {
-    font-size     : 1.5rem;
+    font-size     : 15px;
     text-align    : center;
-    line-height   : 20px;
-    letter-spacing: 1px;
-    word-spacing  : 5px;
   }
 
   .container-footer p,
   .copy-footer p {
-    font-size     : 0.8rem;
-    line-height   : 16px;
-    letter-spacing: 1px;
-    word-spacing  : 3px;
-    font-weight   : 200;
-    color         : white;
+    font-size     : 13px;
+    font-weight   : 400;
   }
 
   #btn-up {
@@ -4146,12 +4221,13 @@ textarea::placeholder {
   }
 
   .btn-wsp {
-    bottom: 8rem;
+    bottom: 11rem;
     right : 5.625rem;
   }
 }
 
-@media (min-width: 1500px) {
+
+/* @media (min-width: 1500px) {
   body {
     overflow: hidden;
   }
@@ -4524,4 +4600,4 @@ textarea::placeholder {
     bottom: 8.75rem;
     right : 5.625rem;
   }
-}
+} */
